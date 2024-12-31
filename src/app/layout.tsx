@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NextAuthProvider } from "@/lib/next-auth/provider";
+import NextAuthProvider from "@/lib/auth/provider";
 import Header from "./components/common/Header";
 import { Suspense } from "react";
 import Loading from "./components/common/Loading";
