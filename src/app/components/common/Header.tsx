@@ -3,18 +3,14 @@ import { getServerSession } from 'next-auth';
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
+import { User } from '@/types/type';
 
-interface User {
-    name?: string | null;
-    email?: string | null;
-    image?: string | null;
-}
 
 const Header = async () => {
 
     const session = await getServerSession(nextAuthOptions);
     const user: User = session?.user as User;
-    console.log(user)
+    // console.log(user)
 
   return (
     <header className='bg-slate-600 text-gray-100 shadow-lg'>
