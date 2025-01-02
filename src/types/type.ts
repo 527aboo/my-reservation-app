@@ -4,3 +4,10 @@ export type User = {
     email?: string | null;
     image?: string | null;
 }
+
+export type Reservation = {
+    id?: string | null;
+    userId?: string | null;
+    date?: Date | null;
+    createdAt?: Date | null; 
+}

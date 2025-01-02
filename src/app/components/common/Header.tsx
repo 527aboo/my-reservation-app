@@ -29,7 +29,7 @@ const Header = async () => {
                 ホーム
             </Link>
 
-            <Link href={user ? "/profile" : "/api/auth/signin"}
+            <Link href={user ? "/myreservation" : "/api/auth/signin"}
                 className='text-gray-300 hover:text-white 
                     px-3 py-2 
                     rounded-md text-sm font-medium'>
