@@ -10,10 +10,7 @@ const Reservation = async () => {
   const user: User = session?.user as User;
 
   return (
-    <div className='text-center w-1/4' >
-      <h1>予約システム</h1>
       <ReservationForm user={user} />
-    </div>
   )
 }
 

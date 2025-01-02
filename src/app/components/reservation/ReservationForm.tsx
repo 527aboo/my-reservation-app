@@ -49,48 +49,52 @@ const ReservationForm = ({ user }: { user: User }) => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-            <label 
-                htmlFor="date" 
-                className='block text-sm font-medium text-gray-700'
-            >
-                日付
-            </label>
-            <input
-                type="date"
-                id="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                required
-                className='mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring-indigo-200 focus:ring-opacity-50'
-            />
-        </div>
-        <div>
-            <label 
-                htmlFor='time' 
-                className='block text-sm font-medium text-gray-700'
-            >
-                時間
-            </label>
-            <select
-                id='time'
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-                required
-                className='mt-1 block w-full rounded-md border-gray-300 shadow-sm from-indigo-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
-            >
-                <option value="">時間を選択</option>
-                {generateTimeOptions()}
-            </select>
-        </div>
+    <div className='mx-auto my-auto w-56 mt-12' >
+        <h1>予約システム</h1>
 
-        <button 
-            type="submit"
-            className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'    
-        >予約する</button>
-        
-    </form>   
+        <form onSubmit={handleSubmit} className="space-y-4">
+            <div className='mt-6'>
+                <label 
+                    htmlFor="date" 
+                    className='block text-sm font-medium text-gray-700'
+                >
+                    日付
+                </label>
+                <input
+                    type="date"
+                    id="date"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                    required
+                    className='mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring-indigo-200 focus:ring-opacity-50'
+                />
+            </div>
+            <div>
+                <label 
+                    htmlFor='time' 
+                    className='block text-sm font-medium text-gray-700'
+                >
+                    時間
+                </label>
+                <select
+                    id='time'
+                    value={time}
+                    onChange={(e) => setTime(e.target.value)}
+                    required
+                    className='mt-1 block w-full rounded-md border-gray-300 shadow-sm from-indigo-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                >
+                    <option value="">時間を選択</option>
+                    {generateTimeOptions()}
+                </select>
+            </div>
+
+            <button 
+                type="submit"
+                className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'    
+            >予約する</button>
+            
+        </form>   
+    </div>
   )
 }
 
